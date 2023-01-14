@@ -101,11 +101,11 @@ export default function Home() {
 							<MenuItem value='dead'>Dead</MenuItem>
 						</Select>
 					</FormControl>
-				</div>
-				<div data-testid="characters" className="subContainer">
+				</div> 
+				<div className="subContainer">
 					{
 						characters?.results?.map((item:any) => (
-							<div key={item?.id}>
+							<div data-testid="characters" key={item?.id}>
 								<Card item={item} />
 							</div>	
 
@@ -115,7 +115,7 @@ export default function Home() {
 				<div className='paginationContainer'>
 					{
 						characters?.info?.pages && (
-							<Pagination onChange={handleChangePage} count={characters?.info?.pages} variant="outlined" shape="rounded"  />
+							<Pagination onChange={handleChangePage} count={Number(characters?.info?.pages)} variant="outlined" shape="rounded"  />
 						)
 					}
 				</div>
