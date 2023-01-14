@@ -25,8 +25,10 @@ const characterInfo = {
 	]
 };
 
-const characterHandler = rest.get('https://rickandmortyapi.com/api/character', (_, res, ctx) => {
+export const characterHandler = rest.get('https://rickandmortyapi.com/api/character', (_, res, ctx) => {
 	return res(ctx.status(200), ctx.json(characterInfo));
 });
 
-export default characterHandler;
+export const characterDetailHandler = rest.get('https://rickandmortyapi.com/api/character/1', (_, res, ctx) => {
+	return res(ctx.status(200), ctx.json(characterInfo));
+});
