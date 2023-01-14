@@ -1,9 +1,12 @@
+import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Home from './index';
 
-test('renders home page', () => {
-	render(<Home />);
-	const linkElement = screen.getByText(/status/i);
-	expect(linkElement).toBeInTheDocument();
+describe('Home', () => {
+	test('renders home page', async () => {
+		await render(<Home />);
+		const linkElement = screen.getByText(/status/i);
+		expect(linkElement).toBeInTheDocument();
+	});
 });
