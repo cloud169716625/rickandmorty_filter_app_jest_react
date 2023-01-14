@@ -1,6 +1,6 @@
 import { setupServer } from 'msw/node';
-import characterHandler from './characterHandler';
+import { characterHandler, characterDetailHandler } from './characterHandler';
 
-const server = setupServer(characterHandler /*anotherHandler*/);
+const server = setupServer(characterHandler, characterDetailHandler);
 
 export { server };
