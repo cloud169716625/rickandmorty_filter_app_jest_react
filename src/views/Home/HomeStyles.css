@@ -1,0 +1,100 @@
+.root {
+	width: 100%;
+	overflow: auto;
+	min-height: 100vh;
+	max-width: 1820px;
+	margin: auto;
+}
+
+.container {
+	padding: 50px;
+}
+
+.subContainer {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	vertical-align: baseline;
+	margin: 26px 0px;
+}
+
+.imageConainer {
+	max-height: 320px;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.cardContainer {
+	overflow: hidden;
+	position: relative;
+	align-self: baseline;
+	max-width: 100%;
+	margin: 0px 0px 24px 0px;
+	width: 100%;
+	background: transparent;
+	border-radius: 21px;
+	box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+	cursor: pointer;
+}
+
+.cardContainer:hover {
+	transform: translateY(-2px);
+	box-shadow: rgb(4 17 29 / 25%) 0px 5px 20px 0px;
+}
+
+.filterContainer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: center;
+}
+
+.paginationContainer {
+	margin: auto;
+	width: fit-content;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.desc {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.gender {
+	color: #2222227d;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.descDiv {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.image {
+	border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+	.container {
+		padding: 10px;
+	}
+	.cardContainer {
+		max-width: 350px;
+		margin: 0px 12px 46px;
+	}
+	.filterContainer {
+		display: grid;
+	}
+}
+
+@media (max-width: 756px) {
+	.filterContainer {
+		display: grid;
+	}
+}
